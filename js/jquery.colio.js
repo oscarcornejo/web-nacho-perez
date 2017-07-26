@@ -710,17 +710,17 @@
 			collapseDuration: 300,				// duration of collapse animation, ms
 			collapseEasing: 'swing',			// easing for collapse animation
 			scrollPage: true,					// whether to scroll page to colio viewport
-			syncScroll: false,					// sync page scroll with expand/collapse animation
+			syncScroll: true,					// sync page scroll with expand/collapse animation
 			scrollDuration: 300,				// page scroll duration, ms
 			scrollEasing: 'swing',				// page scroll easing
 			scrollOffset: 10,					// viewport offset from top of the page, px
 			contentFadeIn: 500,					// content fade-in duration, ms
 			contentFadeOut: 200,				// content fade-out duration, ms
 			contentDelay: 200,					// content fade-in delay, ms
-			navigation: true,					// whether to show next/previous controls
-			closeText: '<span>X</span>',	// text/html for close button
-			//nextText: '<span>Next</span>',		// text/html for next button
-			//prevText: '<span>Prev</span>',		// text/html for previous button
+			navigation: false,					// whether to show next/previous controls
+			closeText: '<span>X</span>',		// text/html for close button
+			nextText: '<span>Next</span>',	// text/html for next button
+			prevText: '<span>Prev</span>',	// text/html for previous button
 			contentFilter: '',					// selector to filter content that is to be loaded
 			hiddenItems: '.hidden',				// selector to exclude hidden portfolio items
 			onExpand: function(){},				// viewport expand callback
