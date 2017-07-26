@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="es"> 
+<!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Colio - jQuery Portfolio Content Expander Plugin</title>
+	<meta name="description" content="Portfolio content expander and details viewer plugin">
+	<meta name="author" content="flGravity">
+	
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/isotope.css">
+	<!-- <link rel="stylesheet" href="css/colio.css"> -->
+	
+	<link href="css/jquery.jcarousel.css" rel="stylesheet" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- JS
+	================================================== -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/bef24966d7.js"></script>
+	
+	<script src="js/jquery.jcarousel.min.js"></script>
+	<script src="js/jcarousel.basic.js"></script>
+
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollUp.min.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.colio.js"></script>
+	
+	
+	<!-- Colio Black Theme
+	================================================== -->
+	
+	<!-- <link rel="stylesheet" href="colio-black/style.css" />
+	<link rel="stylesheet" href="colio-black/fancybox/jquery.fancybox.css" />
+	<script type="text/javascript" src="colio-black/fancybox/jquery.fancybox.js"></script> -->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			// "scrollTop" plugin
+			$.scrollUp();
+			
+			// "colio" plugin
+			$('.portfolio .list').colio({
+				id: 'demo_1',
+				theme: 'black',
+				placement: 'after',
+				hiddenItems: '.isotope-hidden',
+				onContent: function(content){
+					// init "fancybox" plugin
+					// $('.fancybox', content).fancybox();
+					$('.jcarousel', content).jcarousel();
+				}
+			});
+			
+			// "isotope" plugin
+			var filter = '*', isotope_run = function(f) {
+				
+				var list = $('.portfolio .list').isotope({
+					masonry: {
+					  columnWidth: 20
+					}, filter: f
+				});		
+				window.setTimeout(function(){
+					list.trigger('colio','excludeHidden');
+				}, 25);
+			};
+			
+			isotope_run(filter);			
+			
+		});
+	</script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+</head>
+<body>
+	<header class="header">
+		
+	</header><!-- header -->
+
+	<!-- SPACER --> <div class="spacer"></div>
+
+	<div class="container">	
+		<!-- SPACER --> <div class="spacer"></div>
+		
+		<div class="sixteen columns">
+							
+			<div class="portfolio clearfix">
+
+				<div class="list">
+					<div data-content="#colio_c1" class="margen-img">
+						<div class="img1">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_inca_packaging.png" alt="inca packaging"/>
+						</div>
+					</div>
+
+					<div data-content="#colio_c2" class="margen-img">
+						<div class="img2">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_entel.png" alt="entel"/>
+						</div>
+					</div>
+
+					<div data-content="#colio_c3" class="margen-img">
+						<div class="img3">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_welcome_entel.png" alt="entel"/>
+						</div>
+					</div>
+
+					<div data-content="#colio_c4" class="margen-img">
+						<div class="img4">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_poster.png" alt="home_poster"/>
+						</div>
+					</div>
+
+					<div data-content="#colio_c5" class="margen-img">
+						<div class="img5">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_hover_hd.png" alt="Pic"/>
+						</div>
+						
+					</div>
+				</div>
+
+				<div class="list">
+					<div data-content="#colio_c6" class="margen-img">
+						<div class="img6">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_nike_air.png" alt="Pic"/>
+						</div>
+						
+					</div>
+					
+					<div data-content="#colio_c7" class="margen-img">
+						<div class="img7">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_coopeuch.png" alt="Pic"/>
+						</div>
+						
+					</div>
+					
+					<div data-content="#colio_c8" class="margen-img">
+						<div class="img8">
+							<div class="view">
+								<a class="button colio-link" href="#">Ver Proyecto</a>
+							</div>
+							<img src="images/home_pepsy.png" alt="Pic"/>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="list">
+
+				<div data-content="#colio_c9" class="margen-img">
+					<div class="img9">
+						<div class="view">
+							<a class="button colio-link" href="#">Ver Proyecto</a>
+						</div>
+						<img src="images/home_grid.png" alt="Pic"/>
+					</div>
+				</div>
+				</div>
+				
+				<ul class="list"></ul><!-- list -->
+
+			</div><!-- portfolio -->
+			
+			<div id="colio_c1" class="colio-content">
+	            <div class="jcarousel-wrapper">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li><img src="images/inca/inca_sour_lamina_01.jpg" style="width: 940px;" alt=""></li>
+	                        <li><img src="images/inca/inca_sour_lamina_01.jpg" style="width: 940px;" alt=""></li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div>
+
+			<div id="colio_c2" class="colio-content">
+				<div class="jcarousel-wrapper-galeria2">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/entel/lamina1.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/entel/lamina2.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/entel/lamina3.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/entel/lamina4.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/entel/lamina5.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c2 -->
+
+			<div id="colio_c3" class="colio-content">
+				<div class="jcarousel-wrapper-galeria2">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/welcome/entel_portada_welcome.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                    </ul>
+	                </div>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c3 -->
+
+			<div id="colio_c4" class="colio-content">
+				<div class="jcarousel-wrapper-galeria2">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/poster/poster_diseno1.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/poster/poster_diseno2.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/poster/poster_diseno3.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/poster/poster_diseno4.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/poster/poster_diseno5.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/poster/poster_diseno6.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c4 -->
+
+			<div id="colio_c5" class="colio-content">
+				<div class="jcarousel-wrapper-galeria5">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/cover/cover3.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/cover/cover2.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/cover/cover1.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c5 -->
+
+			<div id="colio_c6" class="colio-content">
+				<div class="jcarousel-wrapper-galeria2">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/nike/nike_air_lamina1.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/nike/nike_air_lamina2.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/nike/nike_air_lamina3.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<video src="images/nike/nike_air_video.mp4" width="940" height="480" controls preload></video>
+	                        
+	                        </li>
+	                        
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c6 -->
+
+			<div id="colio_c7" class="colio-content">
+				<div class="jcarousel-wrapper-galeria7">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/coopeuch/coopeuch1.jpg" style="width: 940px; height: 403px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/coopeuch/coopeuch2.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/coopeuch/coopeuch3.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/coopeuch/coopeuch4.jpg" style="width: 940px;" alt="">
+	                        </li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c7 -->
+
+			<div id="colio_c8" class="colio-content">
+				<div class="jcarousel-wrapper-galeria8">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<video src="images/pepsi/pepsy.mp4" width="940" height="480" controls preload></video>
+	                        </li>
+
+	                    </ul>
+	                </div>
+	            </div>
+			</div><!-- colio-content # colio_c8 -->
+
+			<div id="colio_c9" class="colio-content">
+				<div class="jcarousel-wrapper-galeria2">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno1.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                       	<li>
+	                        	<img src="images/grid/branding_diseno2.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno3.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno4.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno5.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno6.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno7.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno8.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                        <li>
+	                        	<img src="images/grid/branding_diseno9.jpg" style="width: 940px; height: 529px" alt="">
+	                        </li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	            </div>
+			</div><!-- colio-content # colio_c8 -->
+	
+			<!-- <div class="grid-brand">
+				<img src="images/home_grid.png" alt="">
+			</div> -->
+		</div>
+		<!-- SPACER --> <div class="spacer"></div>
+		
+	</div><!-- container -->
+
+	<footer>
+		<div class="foo-col-1">
+			<ul class="datos">
+				<li>
+					<i class="fa fa-map-marker" aria-hidden="true"> </i> Santiago de Chile
+				</li>
+				<li>
+					<i class="fa fa-envelope-o" aria-hidden="true"> </i>
+					contacto@przestudio.cl
+				</li>
+				<li>
+					<i class="fa fa-mobile" aria-hidden="true"> </i>
+					+56 9 4264 8695
+				</li>
+			</ul>
+		</div>
+		
+		<div class="foo-col-2">
+			<span>
+				<i class="fa fa-book" aria-hidden="true"></i>
+				DESCARGA EL BROCHURE CORPORATIVO
+			</span>
+		</div>
+		
+		<div class="foo-col-3">LOGO!</div>
+
+	</footer><!-- footer -->
+	
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
