@@ -13,11 +13,6 @@ $(document).ready(function(){
 	
 	isotope_run(filter);	
 
-	$('.bxslider').bxSlider({
-		pager: false, 
-		adaptiveHeight: true
-	});
-
 	$(".slidingDiv").hide();
 	$(".show_hide").show();
 
