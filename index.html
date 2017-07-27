@@ -21,15 +21,11 @@
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" href="css/base.css">
-	<!-- <link rel="stylesheet" href="css/skeleton.css"> -->
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/isotope.css">
-	<link rel="stylesheet" href="css/colio.css">
-	
-	<!-- bxSlider CSS file -->
-	<link href="css/jquery.bxslider.css" rel="stylesheet" />
 
-	<!-- <link href="css/jquery.jcarousel.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" href="css/jquery.bxslider.css" />
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -38,52 +34,12 @@
 	================================================== -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/bef24966d7.js"></script>	
-
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
 	<script type="text/javascript" src="js/jquery.scrollUp.min.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-	
-	<script type="text/javascript" src="js/jquery.colio.js"></script>
 
-	<!-- bxSlider Javascript file -->
 	<script src="js/jquery.bxslider.min.js"></script>
-	
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			
-			// "scrollTop" plugin
-			$.scrollUp();
-			
-			// "colio" plugin
-			$('.portfolio .list').colio({
-				id: 'demo_1',
-				theme: 'black',
-				placement: 'after',
-				hiddenItems: '.isotope-hidden',
-				onContent: function(content){
-					// $(content).find('.jcarousel').jcarousel();
-					$(content).find('.bxslider').bxSlider({pager: false,adaptiveHeight: true});
-				}
-			});
-			
-			// "isotope" plugin
-			var filter = '*', isotope_run = function(f) {
-				
-				var list = $('.portfolio .list').isotope({
-					masonry: {
-					  columnWidth: 20
-					}, filter: f
-				});		
-				window.setTimeout(function(){
-					list.trigger('colio','excludeHidden');
-				}, 25);
-			};
-			
-			isotope_run(filter);			
-			
-		});
-	</script>
+	<script src="js/app.js" type="text/javascript"></script>	
 
 	<!-- Favicons
 	================================================== -->
@@ -95,183 +51,245 @@
 
 </head>
 <body>
-	<header class="header">
-		
-	</header><!-- header -->
+	<header class="header">LOGO!</header><!-- header -->
 
-	<!-- SPACER --> <div class="spacer"></div>
+	<!-- SPACER --><div class="spacer"></div>
 
 	<div class="container">	
-		<!-- SPACER --> <div class="spacer"></div>
+		<!-- SPACER --><div class="spacer"></div>
 		
 		<div class="sixteen columns">
 							
 			<div class="portfolio clearfix">
 
 				<div class="list">
-					<div data-content="#colio_c1" class="margen-img">
+					<!-- GALERIA 1 -->
+					<div class="margen-img" id="galeria_top1">
 						<div class="img1">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link show_hide" href="#galeria1">Ver Proyecto</a>
 							</div>
 							<img src="images/home_inca_packaging.png" alt="inca packaging"/>
 						</div>
-					</div>
+					</div><!-- FIN GALERIA 1 -->
 
-					<div data-content="#colio_c2" class="margen-img">
+					<!-- GALERIA 2 -->
+					<div class="margen-img" id="galeria_top2">
 						<div class="img2">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria2_show_hide" href="#galeria2">Ver Proyecto</a>
 							</div>
 							<img src="images/home_entel.png" alt="entel"/>
 						</div>
-					</div>
+					</div><!-- FIN GALERIA 2 -->
 
-					<div data-content="#colio_c3" class="margen-img">
+					<!-- GALERIA 3 -->
+					<div class="margen-img" id="galeria_top3">
 						<div class="img3">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria3_show_hide" href="#galeria3">Ver Proyecto</a>
 							</div>
 							<img src="images/home_welcome_entel.png" alt="entel"/>
 						</div>
-					</div>
+					</div><!-- FIN GALERIA 3 -->
 
-					<div data-content="#colio_c4" class="margen-img">
+					<!-- GALERIA 4 -->
+					<div class="margen-img" id="galeria_top4">
 						<div class="img4">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria4_show_hide" href="#galeria4">Ver Proyecto</a>
 							</div>
 							<img src="images/home_poster.png" alt="home_poster"/>
 						</div>
-					</div>
+					</div><!-- FIN GALERIA 4 -->
 
-					<div data-content="#colio_c5" class="margen-img">
+					<!-- GALERIA 5 -->
+					<div class="margen-img" id="galeria_top5">
 						<div class="img5">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria5_show_hide" href="#galeria5">Ver Proyecto</a>
 							</div>
 							<img src="images/home_hover_hd.png" alt="Pic"/>
 						</div>
-						
-					</div>
-				</div>
+					</div><!-- FIN GALERIA 5 -->
 
+				</div><!-- FIN LISTA -->
+				
+
+				<!-- ==================================================
+									PROYECTOS 
+				================================================== -->
+				<!-- PROYECTO GALERIA 1 -->
+				<div class="slidingDiv" id="galeria1">
+					<span class="cerrar">
+						<a class="show_hide" href="#galeria_top1" id="galeria_bottom1">X</a>
+					</span>
+		            <ul class="bxslider">
+		                <li><img src="images/inca/inca_sour_lamina_01.jpg" style="width: 940px; height: 529px" alt=""></li>
+		                <li><img src="images/inca/inca_sour_lamina_02.jpg" style="width: 940px; height: 529px" alt=""></li>
+		            </ul>
+				</div><!-- FIN PROYECTO GALERIA 1 -->
+
+				<!-- PROYECTO GALERIA 1 -->
+				<div class="slidingGaleria2" id="galeria2">
+					<span class="cerrar">
+						<a class="galeria2_show_hide" href="#galeria_top2" id="galeria_bottom2">X</a>
+					</span>
+	               <ul class="bxslider">
+	                    <li><img src="images/entel/lamina1.jpg" alt=""></li>
+	                    <li><img src="images/entel/lamina2.jpg" alt=""></li>
+	                    <li><img src="images/entel/lamina3.jpg" alt=""></li>
+	                    <li><img src="images/entel/lamina4.jpg" alt=""></li>
+	                    <li><img src="images/entel/lamina5.jpg" alt=""></li>
+	                </ul>
+				</div><!-- PROYECTO GALERIA 2 -->
+
+				<!-- PROYECTO GALERIA 3 -->
+				<div class="slidingGaleria3" id="galeria3">
+					<span class="cerrar">
+						<a class="galeria3_show_hide" href="#galeria_top3" id="galeria_bottom3">X</a>
+					</span>
+		            <ul class="bxslider">
+		                <li><img src="images/welcome/entel_portada_welcome.jpg" alt=""></li>
+		            </ul>
+				</div><!-- PROYECTO GALERIA 3 -->
+
+				<!-- PROYECTO GALERIA 4 -->
+				<div class="slidingGaleria4" id="galeria4">
+				<span class="cerrar"><a class="galeria4_show_hide" href="#galeria_top4" id="galeria_bottom4">X</a></span>
+		            <ul class="bxslider">
+		                <li><img src="images/poster/poster_diseno1.jpg" alt=""></li>
+		                <li><img src="images/poster/poster_diseno2.jpg" alt=""></li>
+		                <li><img src="images/poster/poster_diseno3.jpg" alt=""></li>
+		                <li><img src="images/poster/poster_diseno4.jpg" alt=""></li>
+		                <li><img src="images/poster/poster_diseno5.jpg" alt=""></li>
+		                <li><img src="images/poster/poster_diseno6.jpg" alt=""></li>
+		            </ul>
+				</div><!-- PROYECTO GALERIA 4 -->
+
+				<!-- PROYECTO GALERIA 5 -->
+				<div class="slidingGaleria5" id="galeria5">
+				<span class="cerrar"><a class="galeria5_show_hide" href="#galeria_top5" id="galeria_bottom5">X</a></span>
+		            <ul class="bxslider">
+		                <li><img src="images/cover/cover3.jpg" alt=""></li>
+		                <li><img src="images/cover/cover2.jpg" alt=""></li>
+		                <li><img src="images/cover/cover1.jpg" alt=""></li>
+		            </ul>
+				</div><!-- PROYECTO GALERIA 5 -->
+				<!-- ==================================================
+									FIN PROYECTOS 
+				================================================== -->
+
+				<!-- ==================================================
+									GALERIAS DE LA 6 A 8
+				================================================== -->
 				<div class="list">
-					<div data-content="#colio_c6" class="margen-img">
+					<div class="margen-img" id="galeria_top6">
 						<div class="img6">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria6_show_hide" href="#galeria6">Ver Proyecto</a>
 							</div>
 							<img src="images/home_nike_air.png" alt="Pic"/>
 						</div>
 						
 					</div>
 					
-					<div data-content="#colio_c7" class="margen-img">
+					<div class="margen-img" id="galeria_top7">
 						<div class="img7">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria7_show_hide" href="#galeria7">Ver Proyecto</a>
 							</div>
 							<img src="images/home_coopeuch.png" alt="Pic"/>
 						</div>
 						
 					</div>
 					
-					<div data-content="#colio_c8" class="margen-img">
+					<div class="margen-img" id="galeria_top8">
 						<div class="img8">
 							<div class="view">
-								<a class="button colio-link" href="#">Ver Proyecto</a>
+								<a class="button colio-link galeria8_show_hide" href="#galeria8">Ver Proyecto</a>
 							</div>
 							<img src="images/home_pepsy.png" alt="Pic"/>
 						</div>
 					</div>
-
-
+					
 				</div>
+
+				<!-- ==================================================
+									FIN GALERIAS DE LA 6 A 8 
+				================================================== -->
+
+				<!-- ==================================================
+									PROYECTOS 
+				================================================== -->
+
+				<div class="slidingGaleria6" id="galeria6">
+					<span class="cerrar">
+						<a class="galeria6_show_hide" href="#galeria_top6" id="galeria_bottom6">X</a>
+					</span>
+		            <ul class="bxslider">
+		                <li><img src="images/nike/nike_air_lamina1.jpg" alt=""></li>
+		                <li><img src="images/nike/nike_air_lamina2.jpg" alt=""></li>
+		                <li><img src="images/nike/nike_air_lamina3.jpg" alt=""></li>
+		                <li><video src="images/nike/nike_air_video.mp4" width="940" height="480" controls preload></video></li>
+		            </ul>
+				</div><!-- PROYECTO GALERIA 6 -->
+
+				<div class="slidingGaleria7" id="galeria7">
+					<span class="cerrar">
+						<a class="galeria7_show_hide" href="#galeria_top7" id="galeria_bottom7">X</a>
+					</span>
+		            <ul class="bxslider">
+		                <li><img src="images/coopeuch/coopeuch1.jpg" alt=""></li>
+		                <li><img src="images/coopeuch/coopeuch2.jpg" alt=""></li>
+		                <li><img src="images/coopeuch/coopeuch3.jpg" alt=""></li>
+		                <li><img src="images/coopeuch/coopeuch4.jpg" alt=""></li>
+		            </ul>
+				</div><!-- PROYECTO GALERIA 7 -->
+
+				<div class="slidingGaleria8" id="galeria8">
+					<span class="cerrar">
+						<a class="galeria8_show_hide" href="#galeria_top8" id="galeria_bottom8">X</a>
+					</span>
+		            <ul class="bxslider">
+		                <li><video src="images/pepsi/pepsy.mp4" width="940" height="480" controls preload></video></li>
+		            </ul>
+				</div><!-- PROYECTO GALERIA 8 -->
+
+				<!-- ==================================================
+									FIN PROYECTOS 
+				================================================== -->
+
+				<!-- ==================================================
+									GALERIA 9
+				================================================== -->
 
 				<div class="list">
-
-				<div data-content="#colio_c9" class="margen-img">
-					<div class="img9">
-						<div class="view">
-							<a class="button colio-link" href="#">Ver Proyecto</a>
+					
+					<div class="margen-img" id="galeria_top9">
+						<div class="img9">
+							<div class="view">
+								<a class="button colio-link galeria9_show_hide" href="#galeria9">Ver Proyecto</a>
+							</div>
+							<img src="images/home_grid.png" alt="Pic"/>
 						</div>
-						<img src="images/home_grid.png" alt="Pic"/>
 					</div>
-				</div>
+
 				</div>
 				
 				<ul class="list"></ul><!-- list -->
 
+				<!-- ==================================================
+									GALERIA 9
+				================================================== -->
+
 			</div><!-- portfolio -->
-			
-			<div id="colio_c1" class="colio-content">
-	            <ul class="bxslider">
-	                <li><img src="images/inca/inca_sour_lamina_01.jpg" alt=""></li>
-	                <li><img src="images/inca/inca_sour_lamina_02.jpg" alt=""></li>
-	            </ul>
-			</div>
 
-			<div id="colio_c2" class="colio-content">
-               <ul class="bxslider">
-                    <li><img src="images/entel/lamina1.jpg" alt=""></li>
-                    <li><img src="images/entel/lamina2.jpg" alt=""></li>
-                    <li><img src="images/entel/lamina3.jpg" alt=""></li>
-                    <li><img src="images/entel/lamina4.jpg" alt=""></li>
-                    <li><img src="images/entel/lamina5.jpg" alt=""></li>
-                </ul>
-			</div><!-- colio-content # colio_c2 -->
 
-			<div id="colio_c3" class="colio-content">
-	            <ul class="bxslider">
-	                <li><img src="images/welcome/entel_portada_welcome.jpg" alt=""></li>
-	            </ul>
-			</div><!-- colio-content # colio_c3 -->
-
-			<div id="colio_c4" class="colio-content">
-	            <ul class="bxslider">
-	                <li><img src="images/poster/poster_diseno1.jpg" alt=""></li>
-	                <li><img src="images/poster/poster_diseno2.jpg" alt=""></li>
-	                <li><img src="images/poster/poster_diseno3.jpg" alt=""></li>
-	                <li><img src="images/poster/poster_diseno4.jpg" alt=""></li>
-	                <li><img src="images/poster/poster_diseno5.jpg" alt=""></li>
-	                <li><img src="images/poster/poster_diseno6.jpg" alt=""></li>
-	            </ul>
-			</div><!-- colio-content # colio_c4 -->
-
-			<div id="colio_c5" class="colio-content">
-	            <ul class="bxslider">
-	                <li><img src="images/cover/cover3.jpg" alt=""></li>
-	                <li><img src="images/cover/cover2.jpg" alt=""></li>
-	                <li><img src="images/cover/cover1.jpg" alt=""></li>
-	            </ul>
-			</div><!-- colio-content # colio_c5 -->
-
-			<div id="colio_c6" class="colio-content">
-	            <ul class="bxslider">
-	                <li><img src="images/nike/nike_air_lamina1.jpg" alt=""></li>
-	                <li><img src="images/nike/nike_air_lamina2.jpg" alt=""></li>
-	                <li><img src="images/nike/nike_air_lamina3.jpg" alt=""></li>
-	                <li><video src="images/nike/nike_air_video.mp4" width="940" height="480" controls preload></video></li>
-	            </ul>
-			</div><!-- colio-content # colio_c6 -->
-
-			<div id="colio_c7" class="colio-content">
-	            <ul class="bxslider">
-	                <li><img src="images/coopeuch/coopeuch1.jpg" alt=""></li>
-	                <li><img src="images/coopeuch/coopeuch2.jpg" alt=""></li>
-	                <li><img src="images/coopeuch/coopeuch3.jpg" alt=""></li>
-	                <li><img src="images/coopeuch/coopeuch4.jpg" alt=""></li>
-	            </ul>
-			</div><!-- colio-content # colio_c7 -->
-
-			<div id="colio_c8" class="colio-content">
-	            <ul class="bxslider">
-	                <li><video src="images/pepsi/pepsy.mp4" width="940" height="480" controls preload></video></li>
-	            </ul>
-			</div><!-- colio-content # colio_c8 -->
-
-			<div id="colio_c9" class="colio-content">
+			<div class="slidingGaleria9" id="galeria9">
+				<span class="cerrar">
+					<a class="galeria9_show_hide" href="#galeria_top9" id="galeria_bottom9">X</a>
+				</span>
 				<ul class="bxslider">
                     <li><img src="images/grid/branding_diseno1.jpg" alt=""></li>
                    	<li><img src="images/grid/branding_diseno2.jpg" alt=""></li>
@@ -319,7 +337,5 @@
 	</footer><!-- footer -->
 	
 
-<!-- End Document
-================================================== -->
 </body>
 </html>

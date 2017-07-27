@@ -25,7 +25,7 @@ p a, p a:visited { line-height: inherit; }
 
 p { margin: 0 0 21px 0; }
 
-/*li { line-height: 21px; margin-bottom: 7px; }*/
+li { line-height: 21px; margin-bottom: 7px; }
 
 /* buttons */
 
@@ -556,6 +556,58 @@ footer > div.foo-col-3{
 	background-color: #e5e5e5;
 }
 
+.show_hide {
+display:none;
+}
+
+.galeria1_show_hide{
+	display:none;
+}
+.galeria2_show_hide{
+	display:none;
+}
+.galeria3_show_hide{
+	display:none;
+}
+
+.galeria4_show_hide{
+	display:none;
+}
+.galeria5_show_hide{
+	display:none;
+}
+.galeria6_show_hide{
+	display:none;
+}
+
+.galeria7_show_hide{
+	display:none;
+}
+.galeria8_show_hide{
+	display:none;
+}
+.galeria9_show_hide{
+	display:none;
+}
+
+.cerrar a{
+    position: relative;
+    top: 45px;
+    left: 93%;
+    color: #fff!important;
+    text-decoration: none!important;
+    font-weight: 800;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 2px 6px;
+    background-color: #6900ff!important;
+    z-index: 100;
+}
+.cerrar a:hover {
+     background-color: #fff!important;
+    color: #6900ff!important;
+}
 
 /* #Page Styles
 ================================================== */
